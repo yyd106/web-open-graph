@@ -1,0 +1,30 @@
+{
+  "extends": "@mantle-dapp/tools-config/typescript",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/actions/*": ["integrations/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "emitDeclarationOnly": false,
+    "noEmit": true,
+    "incremental": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "**/*.js",
+    "*.cjs",
+    "eslint.config.mjs"
+  ],
+  "exclude": ["node_modules", ".next", ".vscode", "generated"]
+}
